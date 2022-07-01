@@ -1,0 +1,60 @@
+<div>
+    <h2 style='margin: 1rem 1rem 0;color:rgb(220,220,220);padding:.2rem 1rem 0;'>prebuilt-scroll-menus</h2>
+    <h3 style='margin: 0 1rem 1rem;color:rgb(220,220,220);border-bottom:rgb(220,220,220) solid .15rem;padding:0 1rem 1rem;text-align:right;'>Documentation</h3>
+    <div style='box-shadow:0 0 2rem rgb(220,220,220); margin: 1rem; border:.1rem rgb(220,220,220) solid;'>
+        <div style='padding:1rem 2rem;'>
+            <h1 style='border-bottom:rgb(220,220,220) solid .15rem;padding:0 0 .5rem;font-family:Monospace;'>&gt; Usage</h1>
+        </div>
+        <div style='margin:-1rem 0 0;padding:1rem 2rem;background-color:rgb(240,240,240);'>
+            <p>Click the bot (acting as a button) titled: "Create".</p>
+            <p>A menu should then appear prompting you for a few Inputs which are described below.</p>
+            <p>If a menu does not appear, you may try reloading the inst, or if you're a developer, ensure no scripts are activly overwriting the menu. <code style='padding:.3rem 0;color:rgb(200,100,100);'>configBot.tags.menuPortal = "scrollMenuCreationInput";</code></p>
+            <p>Your Inst: <code><a href="${url}" target="refresh">${url}</a></code></p>
+        </div>
+    </div>
+    <div style='box-shadow:0 0 2rem rgb(220,220,220); margin: 1rem; border:.1rem rgb(220,220,220) solid;'>
+        <div style='padding:1rem 2rem;'>
+            <h1 style='border-bottom:rgb(240,240,240) solid .15rem;padding:0 0 .5rem;font-family:Monospace;'>&gt; User Input</h1>
+        </div>
+        <div style='margin:-1rem 0 0;padding:1rem 2rem;background-color:rgb(240,240,240);'>
+            <div style='border:.2rem rgb(200,200,200) solid;box-shadow: 0 0 .2rem rgb(200,200,200);padding:1.5rem 2rem;background-color:rgb(90,90,90);color:rgb(255,255,255);margin:1rem 0;'>
+                <h3>Field: <u>Unique Name.</u></h3>
+                <p>This ultimately is the <a href='${dimLink}' style='color:#d3a31f;'>Dimension</a> that the scroll menu is created / stored / acessed in.</p>
+                <p>This text field will not let you enter the name of any existing <a href='${dimLink}' style='color:#d3a31f;'>Dimension</a>.</p>
+                <p>It is best practice to make use of a naming convention (for the unique name) if you decide to create multiple menus.</p>
+                <p><b>Example Naming Convention:</b> <code style='color:#d3a31f;'>myScrollMenu1</code>, <code style='color:#d3a31f;'>myScrollMenu2</code>, <code style='color:#d3a31f;'>myScrollMenu3</code>.</p>
+            </div>
+            <div style='border:.2rem rgb(200,200,200) solid;box-shadow: 0 0 .2rem rgb(200,200,200);padding:.5rem 2rem;background-color:rgb(90,90,90);color:rgb(255,255,255);margin:1rem 0;'>
+                <h3>Field: <u>Enter Text For Lines</u></h3>
+                <p>This is the content that will appear inside the scroll menu(s) once they've been created.</p>
+                <p>To use this you must type out the content you'd like on a single page and click the button below titled: "Add Line(s)".</p>
+            </div>
+            <div style='border:.2rem rgb(200,200,200) solid;box-shadow: 0 0 .2rem rgb(200,200,200);padding:.5rem 2rem;background-color:rgb(90,90,90);color:rgb(255,255,255);margin:1rem 0;'>
+                <h3>Button: <u>Add Line(s)</u></h3>
+                <p>This will take the content inside the <u>Enter Text For Lines</u> field, and cache it until you create the scroll menu.</p>
+                <p>Every time you click the button it will erase all content in the <u>Enter Text For Lines</u> field. This is intentional to allow you to type the next page without having to manualy delete the prior.</p>
+            </div>
+            <div style='border:.2rem rgb(200,200,200) solid;box-shadow: 0 0 .2rem rgb(200,200,200);padding:.5rem 2rem;background-color:rgb(90,90,90);color:rgb(255,255,255);margin:1rem 0;'>
+                <h3>Button: <u>Create</u></h3>
+                <p>Hence the name, this button takes all the cached lines you gave it and the unique name and verify everything is valid to be used.</p>
+                <p>If everything is valid, the data is parsed from the fields and handled eventually creating a scroll menu.</p>
+                <p>The scroll menu is programatically accessible via:  <code style='padding:.3rem 0;color:rgb(200,100,100);'>configBot.tags.menuPortal = "&lt;Unique Name You Typed&gt;";</code></p>
+                <p>All common errors that you may find will be <a href='${toastLink}' style='color:#d3a31f;'>toasted</a> to you with mostly self explanitory fix instructions.</p>
+            </div>
+        </div>
+    </div>
+    <div style='box-shadow:0 0 2rem rgb(220,220,220); margin: 1rem; border:.1rem rgb(220,220,220) solid;'>
+        <div style='padding:1rem 2rem;'>
+            <h1 style='border-bottom:rgb(240,240,240) solid .15rem;padding:0 0 .5rem;font-family:Monospace;'>&gt; For Developers</h1>
+        </div>
+        <div style='margin:-1rem 0 0;padding:1rem 2rem;background-color:rgb(240,240,240);'>
+            <p>Everything is set up to be <a href='${dimLink}' style='color:#d3a31f;'>Dimension</a> based.</p>
+            <p>This "bootstrapper" is setup  within a few dimensions.</p>
+            <p>The <a href='${dimLink}' style='color:#d3a31f;'>Dimension's</a>: <code>home</code>, <code>scrollMenuCreationInput</code>, and <code>scrollMenuCreationGhost</code>.</p>
+            <p>You can view the code for this bundle via the <a href='${portalLink}' style='color:rgb(211,163,31);'>sheet</a> or <a href='${portalLink}' style='color:rgb(211,163,31);'>system portal</a> inside the chosen <a href='${dimLink}' style='color:#d3a31f;'>Dimension</a>.</p>
+        </div>
+    </div>
+    <div>
+      <p style="font-size:1rem;margin:2rem 2rem 1rem;color:rgba(190,190,190,.6);border-top:rgb(220,220,220) solid .15rem;padding:1rem 0;">Author: L.Siler | <a href="https://github.com/LandonSiler/prebuilt-scrollmenu-docs" style='color:rgba(211,163,31,.4);text-decoration:none;'>Github</a></p>
+    </div>
+</div>
